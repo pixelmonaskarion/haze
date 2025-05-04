@@ -5,9 +5,10 @@
 plugins {
   id("dev.chrisbanes.android.library")
   id("dev.chrisbanes.kotlin.multiplatform")
-  id("dev.chrisbanes.compose")
-  id("org.jetbrains.dokka")
-  id("com.vanniktech.maven.publish")
+  id("org.jetbrains.kotlin.plugin.compose")
+  id("org.jetbrains.compose")
+//  id("org.jetbrains.dokka")
+  id("maven-publish")
   id("dev.chrisbanes.metalava")
 }
 
@@ -22,6 +23,17 @@ kotlin {
         api(projects.haze)
         implementation(compose.material3)
       }
+    }
+  }
+}
+
+group = "dev.chrisbanes.haze"
+version = "1.6.0-beta03-pixelmonaskarion"
+
+publishing {
+  repositories {
+    maven {
+
     }
   }
 }

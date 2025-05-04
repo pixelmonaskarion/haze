@@ -9,11 +9,12 @@ plugins {
   id("dev.chrisbanes.kotlin.multiplatform")
   id("dev.chrisbanes.compose")
   id("androidx.baselineprofile")
-  id("org.jetbrains.dokka")
-  id("com.vanniktech.maven.publish")
+//  id("org.jetbrains.dokka")
+//  id("com.vanniktech.maven.publish")
   id("dev.chrisbanes.metalava")
   id("io.github.takahirom.roborazzi")
   id("dev.drewhamilton.poko")
+  id("maven-publish")
 }
 
 android {
@@ -127,4 +128,15 @@ baselineProfile {
 
 dependencies {
   baselineProfile(projects.internal.benchmark)
+}
+
+group = "dev.chrisbanes.haze"
+version = "1.6.0-beta03-pixelmonaskarion"
+
+publishing {
+  repositories {
+    maven {
+
+    }
+  }
 }

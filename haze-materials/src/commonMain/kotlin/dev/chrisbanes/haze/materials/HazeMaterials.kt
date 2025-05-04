@@ -64,7 +64,7 @@ object HazeMaterials {
   @Composable
   @ReadOnlyComposable
   fun regular(
-    containerColor: Color = MaterialTheme.colorScheme.surface,
+    containerColor: Color,
   ): HazeStyle = hazeMaterial(
     containerColor = containerColor,
     lightAlpha = 0.73f,
